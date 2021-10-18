@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MENU</string>
+    <string name="string_jugar">JUGAR</string>
+    <string name="string_puntaje">PUNTAJE</string>
+    <string name="string_respuesta">RESPUESTA</string>
+    <string name="string_Datos">DATOS</string>
+
+
+    <string name="string_nick">Nick jugador</string>
+</resources>
