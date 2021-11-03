@@ -7,4 +7,17 @@
 
 
     <string name="string_nick">Nick jugador</string>
+
+    <string name="string_puntaje_total">Puntaje total:</string>
+    <string name="string_numero">Número</string>
+    <string name="string_intentos">Intentos realizados</string>
+    <string name="string_adivinar">ADIVINAR</string>
+
+    <string name="string_respuesta_correcta">Respuesta Correcta:</string>
+
+    <string name="string_nick_jugador">Nick jugador</string>
+
+    <string name="string_nombre">DANIEL FERNANDO CUELLAR LARIN</string>
+    <string name="string_codigo">CL17I04002</string>
+
 </resources>

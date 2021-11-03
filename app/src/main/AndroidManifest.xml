@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GUIA7">
         <activity
+            android:name=".Datos"
+            android:exported="true" />
+        <activity
+            android:name=".Puntaje"
+            android:exported="true" />
+        <activity
+            android:name=".Respuesta"
+            android:exported="true" />
+        <activity
             android:name=".AgregarUsuario"
             android:exported="true" />
         <activity

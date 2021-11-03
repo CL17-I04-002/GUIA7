@@ -32,6 +32,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintVertical_bias="0.10"
+        android:onClick="verPuntaje"
         android:text="@string/string_puntaje"
         android:backgroundTint="@color/teal_700"
         android:textAlignment="center"/>
@@ -45,6 +46,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintVertical_bias="0.11"
+        android:onClick="verRespuesta"
         android:text="@string/string_respuesta"
         android:backgroundTint="@color/teal_700"
         android:textAlignment="center"/>
@@ -59,6 +61,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintVertical_bias="0.12"
         android:text="@string/string_Datos"
+        android:onClick="verDatos"
         android:backgroundTint="@color/teal_700"
         android:textAlignment="center"/>
 
