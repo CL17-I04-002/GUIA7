@@ -48,16 +48,21 @@ public class Jugar extends AppCompatActivity {
     public void adivinar(View view) {
         int ed_numero_int = Integer.parseInt(ed_numero.getText().toString());
         try {
+            if(ed_numero.getText().length() <= 0){
+                Toast.makeText(this, "Por favor inserte datos", Toast.LENGTH_LONG).show();
+            }
+            else {
                 if (ed_numero_int > 0 && ed_numero_int < 11) {
                     this.sharedPreferences = getSharedPreferences(AgregarUsuario.NAME_FILE, MODE_PRIVATE);
                     if (ed_numero.getText().toString().equals(sharedPreferences.getString("numCorrecto", "0"))) {
                         ////SCORE
                         int puntaje_int = Integer.parseInt(sharedPreferences.getString("puntaje", "") + contadorPuntaje);
-
-
+                        ///NUEVO NUMERO
+                        int nuevo_numero = (int) (Math.random() * 10) + 1;
 
                         SharedPreferences.Editor editorConfig = sharedPreferences.edit();
                         editorConfig.putString("puntaje", String.valueOf(puntaje_int));
+                        editorConfig.putString("numCorrecto", String.valueOf(nuevo_numero));
                         editorConfig.commit();
                         AlertDialog.Builder builder = new AlertDialog.Builder(Jugar.this);
                         builder.setTitle("Confirmacion");
@@ -71,6 +76,7 @@ public class Jugar extends AppCompatActivity {
                         AlertDialog dialog = builder.create();
                         dialog.show();
                         ed_numero.setText("");
+
                     } else {
                         int numero_actual = Integer.parseInt(ed_numero.getText().toString());
                         int numero_correcto = Integer.parseInt(sharedPreferences.getString("numCorrecto", ""));
@@ -88,6 +94,7 @@ public class Jugar extends AppCompatActivity {
                 } else {
                     Toast.makeText(Jugar.this, "Número fuera de rango", Toast.LENGTH_SHORT).show();
                 }
+            }
         }catch (Exception ex){
             Toast.makeText(this, "Error: " + ex.getMessage(), Toast.LENGTH_SHORT).show();
         }
